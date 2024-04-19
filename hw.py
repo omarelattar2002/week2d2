@@ -37,12 +37,17 @@ names2 = ['connor', 'connor', 'bob', 'connor', 'evan', 'max', 'evan', 2, 2, 2, 3
 # Output - ['Connor', 'Connor', 'Connor', 'Evan', 'Evan', 'Kevin']
 
 
-for name in names1:
-    if len(name) < 4:
-        names1.remove(name)
-print(names1.title())
-#I tried to capitilize it but it wouldn't work
+names1 = ['connor', 'connor', 'bob', 'connor', 'evan', 'max', 'evan', 'bob', 'kevin']
 
+
+def new_list_func(arr):
+    new_list = []
+    for name in names1:
+        if len(name) > 4:
+            new_list.append(name.upper())
+    return new_list
+
+print(new_list_func(names1))
 
 
 
